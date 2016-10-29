@@ -12,6 +12,8 @@ WombDefender/Library/assetDatabase3
 WombDefender/Library/AssetServerCacheV3
 WombDefender/Library/ScriptMapper
 WombDefender/Library/CurrentLayout.dwlt
+WombDefender/Library/CrashedAssetImports.txt
+WombDefender/Library/CurrentMaximizeLayout.dwlt
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
@@ -52,4 +54,3 @@ ehthumbs.db
 Thumbs.db
 *.meta
 *.log
-WombDefender/Library/CrashedAssetImports.txt
