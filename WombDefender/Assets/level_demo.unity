@@ -342,7 +342,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 557107143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8c240dcb42f7754ab33c3d9d38cfe92, type: 3}
+  m_Script: {fileID: 11500000, guid: e4ecaa48420a5d14fac985a34dbb9c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
@@ -853,7 +853,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2132946315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15efa65962bec3f4e9612f27db40bbca, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ebba7f9087ed8d4fbc44ad273f17ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HeartSprites:
@@ -864,3 +864,4 @@ MonoBehaviour:
   - {fileID: 21300002, guid: 3631ee7b0d130c241b826226d6a8df37, type: 3}
   - {fileID: 21300000, guid: 3631ee7b0d130c241b826226d6a8df37, type: 3}
   HeartUI: {fileID: 1617060828}
+  womb: {fileID: 0}

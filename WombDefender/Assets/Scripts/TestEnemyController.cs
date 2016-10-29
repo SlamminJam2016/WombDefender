@@ -25,7 +25,7 @@ public class TestEnemyController : MonoBehaviour {
 		}
 
 		if (coll.gameObject.name == "womb") {
-			GameObject.Find ("womb").GetComponent<Womb> ().currentHealth--;
+			GameObject.Find ("womb").GetComponent<WombController> ().currentHealth--;
 			Destroy (gameObject);
 		}
 	}

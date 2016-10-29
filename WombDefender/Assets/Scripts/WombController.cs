@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Womb : MonoBehaviour {
+public class WombController : MonoBehaviour {
 
 	// health stats
 	public int currentHealth;
