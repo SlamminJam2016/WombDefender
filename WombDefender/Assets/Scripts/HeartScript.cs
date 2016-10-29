@@ -13,7 +13,7 @@ public class HeartScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		womb = GameObject.FindWithTag ("womb").GetComponent<Womb> ();
+		womb = GameObject.Find ("womb").GetComponent<Womb> ();
 
 	}
 
