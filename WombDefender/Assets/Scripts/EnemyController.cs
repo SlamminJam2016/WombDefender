@@ -11,11 +11,13 @@ public class EnemyController : MonoBehaviour {
 
 	private int hits; // How many hits this can take
 
+	public int scoreValue = 1;
+
 	// Use this for initialization
 	void Start () {
 		hits = type == EnemyType.Boss ? 5 : (type == EnemyType.Tough ? 2 : 1);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		// Move towards womb
@@ -28,6 +30,8 @@ public class EnemyController : MonoBehaviour {
 			hits--;
 			if (hits == 0) {
 				Destroy (gameObject);
+				ScoreScript.score += scoreValue;
+				ScoreScript.hscore += scoreValue;
 			} else {
 				// TODO: Behavior to bounce off shield and try again
 			}

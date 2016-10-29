@@ -21,6 +21,7 @@ public class HeartController : MonoBehaviour {
 	void Update () {
 		
 		HeartUI.sprite = HeartSprites[womb.currentHealth];
+
 	}
 
 

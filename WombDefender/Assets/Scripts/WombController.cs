@@ -19,7 +19,16 @@ public class WombController : MonoBehaviour {
 
 		if (currentHealth > maxHealth) {
 			currentHealth = maxHealth;
+
 		} 
+
+		if (ScoreScript.hscore >= 100) {
+			if (currentHealth < maxHealth) {
+				currentHealth += 1;
+			}
+			ScoreScript.hscore -= 100;
+		
+		}
 
 		if(currentHealth <= 0) {
 			Die ();
