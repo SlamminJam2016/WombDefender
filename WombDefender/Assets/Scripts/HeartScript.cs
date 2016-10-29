@@ -21,6 +21,7 @@ public class HeartScript : MonoBehaviour {
 	void Update () {
 		
 		HeartUI.sprite = HeartSprites[womb.currentHealth];
+
 	}
 
 

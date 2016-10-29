@@ -7,6 +7,8 @@ public class TestEnemyController : MonoBehaviour {
 
 	public Transform target;
 
+	public int scoreValue = 1;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -22,6 +24,8 @@ public class TestEnemyController : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D coll) {
 		if (coll.gameObject.tag == "Player") { // ie. collision with the barrier
 			Destroy (gameObject);
+			ScoreScript.score += scoreValue;
+			ScoreScript.hscore += scoreValue;
 		}
 
 		if (coll.gameObject.name == "womb") {
