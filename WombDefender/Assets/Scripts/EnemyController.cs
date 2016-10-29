@@ -15,7 +15,10 @@ public class EnemyController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		hits = type == EnemyType.Boss ? 5 : (type == EnemyType.Tough ? 2 : 1);
+		hits = type == EnemyType.Boss ? 5 : (type == EnemyType.Tough ? 2 : 1); // Set higher HP for these enemy types
+
+		// Ensure that enemies go right through the thumbpad
+		Physics2D.IgnoreCollision (GetComponent<Collider2D> (), GameObject.Find ("control_track").GetComponent<Collider2D> ());
 	}
 
 	// Update is called once per frame
