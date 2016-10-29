@@ -32,8 +32,8 @@ obj/
 *.svd
 
 # Unity3D generated meta files
-*.pidb.meta
-*.png.meta
+*.meta
+*.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
@@ -50,3 +50,5 @@ sysinfo.txt
 .Trashes
 ehthumbs.db
 Thumbs.db
+*.meta
+*.log
