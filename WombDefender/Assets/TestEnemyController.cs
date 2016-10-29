@@ -21,7 +21,12 @@ public class TestEnemyController : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D coll) {
 		if (coll.gameObject.tag == "Player") { // ie. collision with the barrier
-			Destroy(gameObject);
+			Destroy (gameObject);
+		}
+
+		if (coll.gameObject.name == "womb") {
+			GameObject.Find ("womb").GetComponent<Womb> ().currentHealth--;
+			Destroy (gameObject);
 		}
 	}
 }

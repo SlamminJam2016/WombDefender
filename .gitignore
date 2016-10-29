@@ -4,16 +4,6 @@ WombDefender/Library/*.asset
 WombDefender/Library/metadata*
 WombDefender/Library/ShaderCache*
 WombDefender/Library/ScriptAssemblies*
-WombDefender/Library/AnnotationManager
-WombDefender/Library/AssetImportState
-WombDefender/Library/LibraryFormatVersion.txt
-WombDefender/Library/shadercompiler-UnityShaderCompiler.exe0.log
-WombDefender/Library/assetDatabase3
-WombDefender/Library/AssetServerCacheV3
-WombDefender/Library/ScriptMapper
-WombDefender/Library/CurrentLayout.dwlt
-WombDefender/Library/CrashedAssetImports.txt
-WombDefender/Library/CurrentMaximizeLayout.dwlt
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
@@ -33,10 +23,6 @@ obj/
 *.booproj
 *.svd
 
-# Unity3D generated meta files
-*.meta
-*.meta
-
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
@@ -52,5 +38,3 @@ sysinfo.txt
 .Trashes
 ehthumbs.db
 Thumbs.db
-*.meta
-*.log
