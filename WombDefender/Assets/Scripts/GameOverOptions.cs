@@ -15,7 +15,7 @@ public class GameOverOptions : MonoBehaviour {
 		if((Input.touchCount >= 1) || (Input.GetKey("left"))) {
 			
 			//yield return new WaitForSeconds (fadeTime);
-			SceneManager.LoadScene("level_demo");
+			SceneManager.LoadScene("Shop");
 		}
 
 	}
