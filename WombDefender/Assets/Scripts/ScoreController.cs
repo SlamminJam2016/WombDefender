@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class ScoreScript : MonoBehaviour {
+public class ScoreController : MonoBehaviour {
 
 	public static int score;
 
