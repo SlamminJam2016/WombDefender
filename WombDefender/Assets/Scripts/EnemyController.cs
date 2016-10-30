@@ -34,9 +34,20 @@ public class EnemyController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float step = base_speed * Time.deltaTime * (is_stunned ? -1f : 1f); // If stunned, move backward
-		transform.position = Vector3.MoveTowards (transform.position, GameObject.Find ("womb").transform.position, step);
 
-		// TODO: Make it spin while stunned
+		if (type != EnemyType.Tricky) {
+			transform.position = Vector3.MoveTowards (transform.position, GameObject.Find ("womb").transform.position, step);
+		} else { // "Tricky" enemies zigzag a bit
+			// Deviate up to 60 degrees left or right, depending on time. Should be a steady cycle.
+			float angle = 60 * Mathf.Sin((Time.time % 3f) * (2 * Mathf.PI) / 3); // Should cycle within [-60, 60] once per second
+			Vector3 direction = Quaternion.Euler (0, 0, angle) * (GameObject.Find ("womb").transform.position - transform.position);
+			Vector3 targetPosition = transform.position + direction;
+			transform.position = Vector3.MoveTowards (transform.position, targetPosition, step);
+		}
+
+		if (is_stunned) {
+			transform.Rotate (Vector3.forward * Time.deltaTime * 10);
+		}
 	}
 
 	void OnCollisionEnter2D (Collision2D coll) {
