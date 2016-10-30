@@ -14,6 +14,7 @@ public class HeartScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		womb = GameObject.Find ("womb").GetComponent<Womb> ();
+//		float fadeTime = GameObject.Find ("Start").GetComponent<Fading> ().BeginFade (1);
 
 	}
 
