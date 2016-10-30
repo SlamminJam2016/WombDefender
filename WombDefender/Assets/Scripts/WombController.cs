@@ -1,17 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Womb : MonoBehaviour {
+public class WombController : MonoBehaviour {
 
 	// health stats
 	public int currentHealth;
 	public int maxHealth = 5;
 
+	private bool extra_life_flag; // When true, award an extra life at next multiple of 20 kills
+
 
 	// Use this for initialization
 	void Start () {
 		currentHealth = maxHealth;
-
+		extra_life_flag = false;
 	}
 	
 	// Update is called once per frame
@@ -22,12 +24,13 @@ public class Womb : MonoBehaviour {
 
 		} 
 
-		if (ScoreScript.hscore >= 100) {
+		if (ScoreController.hscore % 20 == 0 && extra_life_flag) {
 			if (currentHealth < maxHealth) {
 				currentHealth += 1;
 			}
-			ScoreScript.hscore -= 100;
-		
+			extra_life_flag = false;
+		} else if (ScoreController.hscore % 20 != 0 && !extra_life_flag) {
+			extra_life_flag = true;
 		}
 
 		if(currentHealth <= 0) {
