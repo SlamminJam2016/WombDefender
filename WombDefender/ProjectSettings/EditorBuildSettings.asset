@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/level_demo.unity
   - enabled: 1
     path: Assets/GameOver.unity
+  - enabled: 1
+    path: Assets/ShopScreen.unity
