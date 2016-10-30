@@ -15,7 +15,6 @@ public class ScoreController : MonoBehaviour {
 
 		text = GetComponent<Text>();
 		score = 0;
-		totalScore = 0;
 		hscore = 0;
 	
 	}
