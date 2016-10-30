@@ -39,11 +39,11 @@ public class EnemySpawnController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// Change enemy type probability and waiting time range based on player score
-		if (ScoreScript.hscore % 10 == 0 && min_wait >= 600 && wait_flag) { // Decrease wait time a little bit every 10 kills (enemy type irrelevant)
+		if (ScoreController.hscore % 10 == 0 && min_wait >= 600 && wait_flag) { // Decrease wait time a little bit every 10 kills (enemy type irrelevant)
 			min_wait -= 75;
 			max_wait -= 125;
 			wait_flag = false; // So that it doesn't constantly decrease with each frame
-		} else if (ScoreScript.hscore % 10 != 0 && !wait_flag) {
+		} else if (ScoreController.hscore % 10 != 0 && !wait_flag) {
 			wait_flag = true; // Get ready for the next 10
 		}
 	}

@@ -33,8 +33,8 @@ public class EnemyController : MonoBehaviour {
 			hits--;
 			if (hits == 0) {
 				Destroy (gameObject);
-				ScoreScript.score += scoreValue;
-				ScoreScript.hscore += scoreValue;
+				ScoreController.score += scoreValue;
+				ScoreController.hscore += 1; // This is effectively a killcount
 			} else {
 				// TODO: Behavior to bounce off shield and try again
 			}
@@ -42,6 +42,7 @@ public class EnemyController : MonoBehaviour {
 
 		if (coll.gameObject.name == "womb") {
 			GameObject.Find ("womb").GetComponent<WombController> ().currentHealth--;
+
 			Destroy (gameObject);
 		}
 	}
