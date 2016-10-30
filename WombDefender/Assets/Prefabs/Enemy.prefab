@@ -86,8 +86,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  startingX: 4
-  startingY: 4
+  scoreValue: 1
+  tough_sprite: {fileID: 21300000, guid: b5b3391aab15cdd4a832438baccc4a92, type: 3}
+  tricky_sprite: {fileID: 21300000, guid: 7392799a31bf9324295be79111cf1384, type: 3}
+  potent_sprite: {fileID: 21300000, guid: 1184531d0432de943900fce562193e28, type: 3}
+  boss_sprite: {fileID: 21300000, guid: 598deaaa9f7430a4fad8d0098c7b8e96, type: 3}
 --- !u!212 &212000011554135030
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -117,7 +120,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c9fd3d14070570a41a906260292d00c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a911c5dfb38c6b4f9f4cdf5e0a3ab92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

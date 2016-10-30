@@ -13,10 +13,13 @@ public class EnemyController : MonoBehaviour {
 
 	public int scoreValue = 1;
 
+	public Sprite tough_sprite;
+	public Sprite tricky_sprite;
+	public Sprite potent_sprite;
+	public Sprite boss_sprite;
+
 	// Use this for initialization
 	void Start () {
-		hits = type == EnemyType.Boss ? 5 : (type == EnemyType.Tough ? 2 : 1); // Set higher HP for these enemy types
-
 		// Ensure that enemies go right through the thumbpad
 		Physics2D.IgnoreCollision (GetComponent<Collider2D> (), GameObject.Find ("control_track").GetComponent<Collider2D> ());
 	}
@@ -45,5 +48,24 @@ public class EnemyController : MonoBehaviour {
 
 			Destroy (gameObject);
 		}
+	}
+
+	// Since we have to assign type after creating the object, we can't do this stuff in Start()
+	public void SetupType (EnemyType e) {
+		type = e;
+
+		// Change image based on enemy type
+		if (type == EnemyType.Boss) {
+			GetComponent<SpriteRenderer> ().sprite = boss_sprite;
+		} else if (type == EnemyType.Potent) {
+			GetComponent<SpriteRenderer> ().sprite = potent_sprite;
+		} else if (type == EnemyType.Tricky) {
+			GetComponent<SpriteRenderer> ().sprite = tricky_sprite;
+		} else if (type == EnemyType.Tough) {
+			GetComponent<SpriteRenderer> ().sprite = tough_sprite;
+		} // Normal enemies just get the normal sprite
+
+		//hits = type == EnemyType.Boss ? 5 : (type == EnemyType.Tough ? 2 : 1); // Set higher HP for these enemy types
+		hits = 1;
 	}
 }

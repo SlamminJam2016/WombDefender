@@ -13,8 +13,9 @@ public class EnemySpawnController : MonoBehaviour {
 	// Could have done this all internally but setting it through the UI seems easier
 	public GameObject enemy_prefab;
 
-	// Flags used to control when waiting time gets shortened/lengthened
+	// Flags used to control when waiting time gets shortened and when enemy type probabilities change
 	private bool wait_flag;
+	private bool enemy_prob_flag;
 
 	// Use this for initialization
 	void Start () {
@@ -42,9 +43,22 @@ public class EnemySpawnController : MonoBehaviour {
 		if (ScoreController.hscore % 10 == 0 && min_wait >= 600 && wait_flag) { // Decrease wait time a little bit every 10 kills (enemy type irrelevant)
 			min_wait -= 75;
 			max_wait -= 125;
+
 			wait_flag = false; // So that it doesn't constantly decrease with each frame
 		} else if (ScoreController.hscore % 10 != 0 && !wait_flag) {
 			wait_flag = true; // Get ready for the next 10
+		}
+
+		if (ScoreController.hscore % 5 == 0 && enemy_type_prob[0] > 20 && enemy_prob_flag) {
+			enemy_type_prob [0] -= 10; // Decrement normal enemies
+			enemy_type_prob [1] += 4;
+			enemy_type_prob [2] += 2;
+			enemy_type_prob [3] += 3;
+			enemy_type_prob [4] += 1;
+
+			enemy_prob_flag = false; // So that it doesn't constantly change with each frame
+		} else if (ScoreController.hscore % 5 != 0 && !enemy_prob_flag) {
+			enemy_prob_flag = true; // Get ready for the next 5
 		}
 	}
 
@@ -88,7 +102,7 @@ public class EnemySpawnController : MonoBehaviour {
 
 		// Spawn the enemy
 		GameObject newEnemy = (GameObject)Instantiate(enemy_prefab, new Vector3(xCoord, yCoord, 0), Quaternion.identity);
-		newEnemy.GetComponent<EnemyController> ().type = type; // Setup enemy type
+		newEnemy.GetComponent<EnemyController> ().SetupType (type);
 
 
 		// Prepare to spawn the next enemy
