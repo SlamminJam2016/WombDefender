@@ -49,13 +49,13 @@ public class EnemyController : MonoBehaviour {
 			} else {
 				is_stunned = true;
 				Physics2D.IgnoreCollision (GetComponent<Collider2D> (), GameObject.Find ("barrier").GetComponent<Collider2D> ());
-				// TODO: Behavior to bounce off shield and try again
 				StartCoroutine(Unstun(5f));
 			}
 		}
 
 		if (coll.gameObject.name == "womb") {
-			GameObject.Find ("womb").GetComponent<WombController> ().currentHealth -= (type == EnemyType.Potent ? 2 : 1);
+			GameObject.Find ("womb").GetComponent<WombController> ().currentHealth -= 
+				(type == EnemyType.Potent && GameObject.Find ("womb").GetComponent<WombController> ().currentHealth > 1 ? 2 : 1);
 
 			Destroy (gameObject);
 		}
