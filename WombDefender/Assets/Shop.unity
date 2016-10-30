@@ -922,7 +922,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 300
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -950,6 +950,7 @@ GameObject:
   - 224: {fileID: 792464865}
   - 222: {fileID: 792464867}
   - 114: {fileID: 792464866}
+  - 114: {fileID: 792464868}
   m_Layer: 5
   m_Name: CondomCount
   m_TagString: Untagged
@@ -1014,6 +1015,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 792464864}
+--- !u!114 &792464868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 792464864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b5d0da7b5264a2a98bfd7b1f9c4ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &836057022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,6 +1036,7 @@ GameObject:
   - 224: {fileID: 836057023}
   - 222: {fileID: 836057025}
   - 114: {fileID: 836057024}
+  - 114: {fileID: 836057026}
   m_Layer: 5
   m_Name: SpermicideCount
   m_TagString: Untagged
@@ -1088,6 +1101,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 836057022}
+--- !u!114 &836057026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836057022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953c837508b26403289984d8b2daad2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1186362300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1258,7 @@ GameObject:
   - 224: {fileID: 1265284016}
   - 222: {fileID: 1265284018}
   - 114: {fileID: 1265284017}
+  - 114: {fileID: 1265284019}
   m_Layer: 5
   m_Name: PineappleCount
   m_TagString: Untagged
@@ -1298,6 +1323,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1265284015}
+--- !u!114 &1265284019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1265284015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab0d06411e11e46139fcc43b1db0648b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1392566837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,6 +1776,7 @@ GameObject:
   - 224: {fileID: 1523855187}
   - 222: {fileID: 1523855189}
   - 114: {fileID: 1523855188}
+  - 114: {fileID: 1523855190}
   m_Layer: 5
   m_Name: BarrierCount
   m_TagString: Untagged
@@ -1804,6 +1841,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1523855186}
+--- !u!114 &1523855190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1523855186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3012aaf0dba74c9884ad04f52db3ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1719934175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,6 +1862,7 @@ GameObject:
   - 224: {fileID: 1719934176}
   - 222: {fileID: 1719934178}
   - 114: {fileID: 1719934177}
+  - 114: {fileID: 1719934179}
   m_Layer: 5
   m_Name: PlanBCount
   m_TagString: Untagged
@@ -1878,6 +1927,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1719934175}
+--- !u!114 &1719934179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1719934175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b960b2c2388346f28b2c4b0fd31953d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1734740358
 GameObject:
   m_ObjectHideFlags: 0
