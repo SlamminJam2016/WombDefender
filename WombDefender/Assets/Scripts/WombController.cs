@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class WombController : MonoBehaviour {
 
@@ -41,7 +42,8 @@ public class WombController : MonoBehaviour {
 	}
 
 	void Die() {
+		
 		// restart game on death Note: change later to screen/tap to start
-		//SceneManager.LoadScene(SceneManager.LoadedScene);
+		SceneManager.LoadScene("GameOver");
 	}
 }
