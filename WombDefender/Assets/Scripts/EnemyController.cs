@@ -67,6 +67,7 @@ public class EnemyController : MonoBehaviour {
 			if (hits == 0) {
 				Destroy (gameObject);
 				ScoreController.score += scoreValue;
+				ScoreController.totalScore += scoreValue; // used for shop purposes
 				ScoreController.hscore += 1; // This is effectively a killcount
 			} else {
 				is_stunned = true;

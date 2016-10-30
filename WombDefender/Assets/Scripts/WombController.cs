@@ -44,6 +44,8 @@ public class WombController : MonoBehaviour {
 	void Die() {
 		
 		// restart game on death Note: change later to screen/tap to start
+
+
 		SceneManager.LoadScene("GameOver");
 	}
 }
