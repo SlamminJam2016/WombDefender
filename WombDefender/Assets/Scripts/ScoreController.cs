@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ScoreController : MonoBehaviour {
 
 	public static int score;
-
+	public static int totalScore; // used for shop purposes
 	// invisible counter that gives extra life
 	public static int hscore;
 
