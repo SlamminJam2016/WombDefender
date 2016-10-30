@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Womb : MonoBehaviour {
+public class WombController : MonoBehaviour {
 
 	// health stats
 	public int currentHealth;
@@ -22,11 +22,11 @@ public class Womb : MonoBehaviour {
 
 		} 
 
-		if (ScoreScript.hscore >= 100) {
+		if (ScoreController.hscore >= 100) {
 			if (currentHealth < maxHealth) {
 				currentHealth += 1;
 			}
-			ScoreScript.hscore -= 100;
+			ScoreController.hscore -= 100;
 		
 		}
 

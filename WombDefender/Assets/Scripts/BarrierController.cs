@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BarrierController : MonoBehaviour {
 
-	private const int ANGLE_FACTOR = 50;
+	private const int ANGLE_FACTOR = 100;
 
 	public float TargetAngle = 0; // Angle toward which we rotate with the thumbpad
 

@@ -2,18 +2,18 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class HeartScript : MonoBehaviour {
+public class HeartController : MonoBehaviour {
 
 	public Sprite[] HeartSprites;
 
 	public Image HeartUI;
 
-	private Womb womb;
+	private WombController womb;
 
 
 	// Use this for initialization
 	void Start () {
-		womb = GameObject.Find ("womb").GetComponent<Womb> ();
+		womb = GameObject.Find ("womb").GetComponent<WombController> ();
 
 	}
 
