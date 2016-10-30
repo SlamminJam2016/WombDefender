@@ -13,6 +13,9 @@ public class EnemySpawnController : MonoBehaviour {
 	// Could have done this all internally but setting it through the UI seems easier
 	public GameObject enemy_prefab;
 
+	// Flags used to control when waiting time gets shortened/lengthened
+	private bool wait_flag;
+
 	// Use this for initialization
 	void Start () {
 		// To start we spawn only normal enemies
@@ -27,12 +30,22 @@ public class EnemySpawnController : MonoBehaviour {
 		min_wait = 1500;
 		max_wait = 2500;
 
+		// Set flags to starting values
+		wait_flag = false;
+
 		Invoke ("Spawn", Random.Range (min_wait, max_wait + 1) / 1000);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		// Change enemy type probability and waiting time range based on player score
+		if (ScoreScript.hscore % 10 == 0 && min_wait >= 600 && wait_flag) { // Decrease wait time a little bit every 10 kills (enemy type irrelevant)
+			min_wait -= 75;
+			max_wait -= 125;
+			wait_flag = false; // So that it doesn't constantly decrease with each frame
+		} else if (ScoreScript.hscore % 10 != 0 && !wait_flag) {
+			wait_flag = true; // Get ready for the next 10
+		}
 	}
 
 	// Spawn an enemy with random position and type, after a random amount of time
