@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class shopController : MonoBehaviour {
 
+
 	public void condomBuy() {
 		if (ScoreController.totalScore >= 1000) {
 			ScoreController.totalScore -= 1000;
